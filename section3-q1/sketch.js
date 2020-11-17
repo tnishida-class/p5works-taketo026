@@ -4,15 +4,18 @@
 function setup(){
   createCanvas(400, 400);
   background(255);
-  balloon("I love keyakizaka46");
+  balloon("プログラミング基礎演習",150,150,150,94,185,84,200,70,200,);
 }
 
-function balloon(t){
+function balloon(t,x,y,s,a,b,c,d,e,f){
   let w = textWidth(t);
   let h = textAscent() + textDescent();
-  let p = 2;
-  fill(0);
-  rect(0, 0, w + p * 2, h + p * 2);
-  fill(255);
-  text(t, p, h + p);
+  let p = 5;
+  noStroke();
+  fill(a,b,c);
+  rect(x, y, w + p * 2, h + p * 2);
+  fill(d,e,f);
+  text(t, x+p,y+h+p);
+  fill(a,b,c);
+  triangle(x+10,y+h+p*2,x+20,y+h+p*2,x+5,y+h+p*2+15);
 }
