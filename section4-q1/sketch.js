@@ -11,6 +11,9 @@ function setup(){
 function draw(){
   background(160, 192, 255);
   count = (count + 1) % cycle;
+  size = 100 - count
+  if(size<50){size=count}
   // BLANK[1]
+  fill(255)
   ellipse(width / 2, height / 2, size);
 }
